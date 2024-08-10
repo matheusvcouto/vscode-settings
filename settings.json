@@ -1,0 +1,83 @@
+{
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.editor.labelFormat": "short",
+  "workbench.statusBar.visible": true,
+  "editor.tabSize": 2,
+  // "window.menuBarVisibility": "hidden",
+  "explorer.compactFolders": false,
+  "editor.minimap.enabled": false,
+  "workbench.layoutControl.enabled": false,
+  "breadcrumbs.enabled": false,
+  "[prisma]": {
+    "editor.formatOnSave": true
+  },
+  // Python
+  "python.analysis.typeCheckingMode": "strict",
+  // fonts
+  "editor.fontLigatures": true,
+  "editor.fontFamily": "JetBrains Mono", // JetBrains Mono, Geist Mono
+  "editor.fontSize": 13,
+  "terminal.integrated.fontSize": 13,
+  // outras config
+  "window.commandCenter": false,
+  "window.menuBarVisibility": "toggle", // clicar na tecla auth para acessar
+  "workbench.activityBar.location": "top",
+  "workbench.iconTheme": "material-icon-theme", // teste
+  "material-icon-theme.activeIconPack": "nest",
+  "symbols.hidesExplorerArrows": false,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "files.autoSave": "afterDelay",
+  "workbench.editor.limit.enabled": true,
+  "workbench.editor.limit.value": 3,
+  "editor.cursorBlinking": "phase",
+  "editor.cursorSmoothCaretAnimation": "on",
+  // i like themes "Default Dark Modern" and "Min Dark"
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.patterns": {
+    "*.ts": "${capture}.js, ${capture}.d.ts",
+    "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+    "*.jsx": "${capture}.js",
+    "*.tsx": "${capture}.ts",
+    "tsconfig.json": "tsconfig.*.json",
+    "package.json": "package-lock.json, yarn.lock, tsconfig.json, .gitignore, README.md, .eslintrc.js, .prettierrc, tsconfig.build.json, tsconfig.node.json, .eslintrc.json, .eslintrc.cjs, postcss.config.mjs, postcss.config.cjs, prettier.config.js, start-database.sh, tsconfig.tsbuildinfo",
+    "Cargo.toml": "Cargo.lock",
+    "private_key.pem": "private_key.pem, public_key.pem, private_key_base64.txt, public_key_base64.txt",
+    ".env.local": ".env.local, .env.exemple",
+    "next.config.mjs": "next.config.mjs, next-env.d.ts",
+    "*.sqlite": "${capture}.${extname}-*",
+    "*.db": "${capture}.${extname}-*",
+    "*.sqlite3": "${capture}.${extname}-*",
+    "*.db3": "${capture}.${extname}-*",
+    "*.sdb": "${capture}.${extname}-*",
+    "*.s3db": "${capture}.${extname}-*"
+  },
+  "symbols.files.associations": {
+    "app.module.ts": "nest",
+    "*.service.ts": "nest"
+  },
+  "prisma.showPrismaDataPlatformNotification": false,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "workbench.colorTheme": "GitHub Dark",
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "**/node_modules": true
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[astro]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "svelte.enable-ts-plugin": true
+}

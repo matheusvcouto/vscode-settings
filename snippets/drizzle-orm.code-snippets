@@ -1,0 +1,92 @@
+{
+	// Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"Drizzle ORM Table and Relations": {
+    "prefix": "drizzle:pg", // pg_drizzle
+		"scope": "javascript,typescript",
+    "body": [
+      "import { pgTable, serial, text, integer, boolean, timestamp, jsonb } from 'drizzle-orm/pg-core';",
+      "import { relations, sql } from 'drizzle-orm';",
+      "",
+      "export const ${1:${TM_FILENAME_BASE}} = pgTable('${1:${TM_FILENAME_BASE}}', {",
+      "  id: text('id').primaryKey().notNull()$2,",
+      "  $0",
+      "});",
+      "",
+      "// export const ${1:${TM_FILENAME_BASE}}Relations = relations(${1:${TM_FILENAME_BASE}}, ({ one, many }) => ({",
+      "  ",
+      "// }));"
+    ],
+    "description": "Snippet para criação de tabela e relações com Drizzle ORM"
+  },
+	"Drizzle ORM Text Field": {
+		"scope": "javascript,typescript",
+    "prefix": "dl_text",
+    "body": [
+      "${1:fieldName}: text('${1:fieldName}')$2,$0"
+    ],
+    "description": "Snippet para campo text no Drizzle ORM"
+  },
+	"Drizzle ORM Integer Field": {
+    "prefix": "dl_interger",
+		"scope": "javascript,typescript",
+    "body": [
+      "${1:fieldName}: integer('${1:fieldName}')$2,$0"
+    ],
+    "description": "Snippet para campo integer no Drizzle ORM"
+  },
+	"Drizzle ORM Boolean Field": {
+    "prefix": "dl_boolean",
+		"scope": "javascript,typescript",
+    "body": [
+      "${1:fieldName}: boolean('${1:fieldName}')$2,$0"
+    ],
+    "description": "Snippet para campo boolean no Drizzle ORM"
+  },
+	"Drizzle ORM Timestamp Field": {
+    "prefix": "dl_timestamp",
+		"scope": "javascript,typescript",
+    "body": [
+      "${1:fieldName}: timestamp('${1:fieldName}')$2,$0"
+    ],
+    "description": "Snippet para campo timestamp no Drizzle ORM"
+  },
+	"Drizzle ORM Created At Field": {
+    "prefix": "dl_createdAt",
+		"scope": "javascript,typescript",
+    "body": [
+      "createdAt: timestamp('created_at').notNull().default(sql`CURRENT_TIMESTAMP`),"
+    ],
+    "description": "Snippet para campo createdAt no Drizzle ORM"
+  },
+  "Drizzle ORM Updated At Field": {
+    "prefix": "dl_updatedAt",
+		"scope": "javascript,typescript",
+    "body": [
+      "updatedAt: timestamp('updated_at').notNull().default(sql`CURRENT_TIMESTAMP`).\\$onUpdate(() => sql`CURRENT_TIMESTAMP`),"
+    ],
+    "description": "Snippet para campo updatedAt no Drizzle ORM"
+  },
+  "Drizzle ORM Updated At JSONB table": {
+    "prefix": "dl_jsonb",
+		"scope": "javascript,typescript",
+    "body": [
+      "${1:fieldName}: jsonb('${1:fieldName}')$2,$0"
+    ],
+    "description": "Snippet para campo updatedAt no Drizzle ORM"
+  }
+}

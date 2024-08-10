@@ -1,0 +1,134 @@
+{
+	// Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+
+	"zCreateObjectSchema": {
+		"scope": "javascript,typescript,typescriptreact",
+		"prefix": "zCreateObjectSchema",
+		"body": [
+			"const $1 = z.object({",
+			"\t$2",
+			"});$0"
+		]
+	},
+
+	"zObject": {
+		"scope": "javascript,typescript,typescriptreact",
+		"prefix": "zObject",
+		"body": [
+			"z.object({",
+			"\t$1",
+			"});"
+		],
+		"description": "Create a Zod object schema"
+	},
+	// string
+	"zString": {
+		"scope": "javascript,typescript,typescriptreact",
+		"prefix": "zString",
+		"body": [
+			"z.string()$1,$0",
+		],
+		"description": "Define a Zod string schema"
+	},
+	"zStringMin": {
+		"scope": "javascript,typescript,typescriptreact",
+		"prefix": "zStringMin",
+		"body": [
+			"z.string().min($1)$2,$0"
+		],
+		"description": "Define a Zod string schema with minimum length"
+	},
+	"zStringMax": {
+		"scope": "javascript,typescript,typescriptreact",
+		"prefix": "zStringMax",
+		"body": [
+			"z.string().max($1)$2,$0"
+		],
+		"description": "Define a Zod string schema with maximum length"
+	},
+	// number
+	"zNumber": {
+		"scope": "javascript,typescript,typescriptreact",
+		"prefix": "zNumber",
+		"body": [
+			"z.number()$1,$0"
+		],
+		"description": "Define a Zod number schema"
+	},
+	"zNumberMin": {
+		"scope": "javascript,typescript,typescriptreact",
+		"prefix": "zNumberMin",
+		"body": [
+			"z.number().min($1)$2,$0"
+		],
+		"description": "Define a Zod number schema with minimum value"
+	},
+	"zNumberMax": {
+		"scope": "javascript,typescript,typescriptreact",
+		"prefix": "zNumberMax",
+		"body": [
+			"z.number().max($1)$2,$0"
+		],
+		"description": "Define a Zod number schema with maximum value"
+	},
+	// boolean
+	"zBoolean": {
+		"scope": "javascript,typescript,typescriptreact",
+		"prefix": "zBoolean",
+		"body": [
+			"z.boolean()$1,$0"
+		],
+		"description": "Define a Zod boolean schema"
+	},
+	// date
+	"zDate": {
+		"scope": "javascript,typescript,typescriptreact",
+		"prefix": "zDate",
+		"body": [
+			"z.date()$1,$0"
+		],
+		"description": "Define a Zod date schema"
+	},
+	// array
+	"zArray": {
+		"scope": "javascript,typescript,typescriptreact",
+		"prefix": "zArray",
+		"body": [
+			"z.array([$1])$2,$0"
+		],
+		"description": "Define a Zod array schema"
+	},
+	// enum
+	"zEnum": {
+		"scope": "javascript,typescript,typescriptreact",
+		"prefix": "zEnum",
+		"body": [
+			"z.enum([$1])$2,$0"
+		],
+		"description": "Define a Zod enum schema"
+	},
+	// safe parse
+	"zSafeParse": {
+		"scope": "javascript,typescript,typescriptreact",
+		"prefix": "zSafeParse",
+		"body": [
+			"const { $0 } = $1.safeParse($2);",
+		],
+		"description": "Perform a safe parse using a Zod schema"
+	},
+	// parse
+	"zParse": {
+		"scope": "javascript,typescript,typescriptreact",
+		"prefix": "zParse",
+		"body": [
+			"const data = $1.parse($2);",
+		],
+		"description": "Parse data using a Zod schema"
+	},
+}
